@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>daze</title>
+</head>
+
+<body>
+
+ <div class="body">
+     <br>
+     <br>
+     <br>
+
+     <a href="/index.html"> <img src ="images/logo.svg"style="margin-left:11%;position: absolute;
+        top: 6%;"> </a>
+         <img src ="images/profile1.svg" style="object-fit:cover;display:block;margin:auto;">
+         <img id = 'homeButton' src = "images/homeUnclicked.svg" style="top:89%;left:35%;position: absolute;" onmouseover="style='top:89%;left:35%;position: absolute;cursor: pointer;'" onmousedown ="getHome(this,document.getElementById('qaButton'),document.getElementById('aboutButton'),document.getElementById('profileBar'))">
+         <img id = 'qaButton' src = "images/qaUnclicked.svg" style="top:89%;left:47%;position: absolute;"onmouseover="style='top:89%;left:47%;position: absolute;cursor: pointer;'"onmousedown ="getQA(document.getElementById('homeButton'),this,document.getElementById('aboutButton'),document.getElementById('profileBar'))">
+         <img id = 'aboutButton' src = "images/aboutUnclicked.svg" style="top:89%;left:59%;position: absolute;"onmouseover="style='top:89%;left:59%;position: absolute; cursor: pointer;'" onmousedown ="getAbout(document.getElementById('homeButton'),document.getElementById('qaButton'),this,document.getElementById('profileBar'))">
+        <img id = 'profileBar'src ="images/profileVideos.svg" style="position:absolute;left:17%;top:110%;">
+    </div>
+    <script>
+        function getHome(home,qa,about,tab) {
+                  home.setAttribute ('src','images/homeClicked.svg');
+                  home.setAttribute('style',"top:89%;left:35%;position: absolute;")
+                  qa.setAttribute ('src','images/qaUnclicked.svg');
+                  about.setAttribute ('src','images/aboutUnclicked.svg');
+                  tab.setAttribute ('src','images/profileVideos.svg');
+        } 
+        function getQA(home,qa,about,tab) {
+            qa.setAttribute ('src','images/qaClicked.svg');
+            home.setAttribute ('src','images/homeUnclicked.svg');
+            about.setAttribute ('src','images/aboutUnclicked.svg');
+            tab.setAttribute ('src','images/questionsTab.svg');
+            tab.setAttribute ('style',"position:absolute;left:17%;top:110%;");
+            
+        } 
+        function getAbout(home,qa,about,tab) {
+            qa.setAttribute ('src','images/qaUnclicked.svg');
+            home.setAttribute ('src','images/homeUnclicked.svg');
+            about.setAttribute ('src','images/aboutClicked.svg');
+            tab.setAttribute ('src','images/aboutTab.svg');
+            tab.setAttribute ('style',"position:absolute;left:17%;top:110%;");
+        } 
+                
+    </script>
+
+</body>
+</html>

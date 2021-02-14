@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+.uniIcons {
+  width: 14vw;
+  height: 12vw;
+  margin:10px 10px 10px 10px;
+}
+
+.uniIcons:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.uniContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-image {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.video{
+  position: absolute;
+  width: 21%;
+  height: 53.5%;
+  left: 8%;
+  top: 94.7%;
+}
+
+.daze{
+  margin-left: 11%;
+  position: absolute;
+  top: 6%;
+}
+
+.video:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
